@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValuePriceCalculator.Tests.Unit", "ValuePriceCalculator.Tests.Unit\ValuePriceCalculator.Tests.Unit.csproj", "{2CD902FB-14E9-490D-94EB-E57F3F0FFE3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValuePriceCalculator.Core", "ValuePriceCalculator.Core\ValuePriceCalculator.Core.csproj", "{B47E7D2D-C445-4FB0-BD26-D33D80D6666A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CD902FB-14E9-490D-94EB-E57F3F0FFE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD902FB-14E9-490D-94EB-E57F3F0FFE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD902FB-14E9-490D-94EB-E57F3F0FFE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD902FB-14E9-490D-94EB-E57F3F0FFE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B47E7D2D-C445-4FB0-BD26-D33D80D6666A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B47E7D2D-C445-4FB0-BD26-D33D80D6666A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B47E7D2D-C445-4FB0-BD26-D33D80D6666A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B47E7D2D-C445-4FB0-BD26-D33D80D6666A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF90B51A-CD5B-47DF-B6BC-D10760BEFF00}
+	EndGlobalSection
+EndGlobal
