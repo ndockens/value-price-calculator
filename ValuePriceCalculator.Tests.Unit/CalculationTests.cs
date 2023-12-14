@@ -8,10 +8,10 @@ namespace ValuePriceCalculator.Tests.Unit
     public class CalculationTests
     {
         [Fact]
-        public void ConsultantIsDesperate()
+        public void ConsultantReallyWantsTheJob()
         {
             var valueToClient = 100000;
-            var consultantDesperationLevel = 1;
+            var consultantDesperationLevel = DesperationLevel.High;
             var calculator = new Calculator();
 
             List<double> priceOptions = calculator.GetPriceOptions(valueToClient, consultantDesperationLevel);
@@ -22,10 +22,10 @@ namespace ValuePriceCalculator.Tests.Unit
         }
 
         [Fact]
-        public void ConsultantIsNotDesperate()
+        public void ConsultantDoesntCare()
         {
             var valueToClient = 100000;
-            var consultantDesperationLevel = 0;
+            var consultantDesperationLevel = DesperationLevel.Low;
             var calculator = new Calculator();
 
             List<double> priceOptions = calculator.GetPriceOptions(valueToClient, consultantDesperationLevel);

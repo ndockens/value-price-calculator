@@ -5,27 +5,33 @@ namespace ValuePriceCalculator.Core
 {
     public class Calculator
     {
+        private readonly List<double> lowDesperationDenominators = new() { 10, 4.545454545454545, 2 };
+        private readonly List<double> highDesperationDenominators = new() { 10, 6.666666666666667, 5.714285714285714 };
+
         public Calculator()
         {
         }
 
-        public List<double> GetPriceOptions(int valueToClient, int consultantDesperationLevel)
+        public List<double> GetPriceOptions(int valueToClient, DesperationLevel consultantDesperationLevel)
         {
+            var priceOptions = new List<double>();
             List<double> denominators = GetDenominators(consultantDesperationLevel);
 
-            double option1 = CalculatePrice(valueToClient, denominators[0]);
-            double option2 = CalculatePrice(valueToClient, denominators[1]);
-            double option3 = CalculatePrice(valueToClient, denominators[2]);
+            foreach (var denominator in denominators)
+            {
+                var price = CalculatePrice(valueToClient, denominator);
+                priceOptions.Add(price);
+            }
 
-            return new List<double> { option1, option2, option3 };
+            return priceOptions;
         }
 
-        private List<double> GetDenominators(int consultantDesperationLevel)
+        private List<double> GetDenominators(DesperationLevel consultantDesperationLevel)
         {
-            if (consultantDesperationLevel == 0)
-                return new List<double> { 10, 4.545454545454545, 2 };
+            if (consultantDesperationLevel == DesperationLevel.Low)
+                return lowDesperationDenominators;
             else
-                return new List<double> { 10, 6.666666666666667, 5.714285714285714 };
+                return highDesperationDenominators;
         }
 
         private double CalculatePrice(int valueToClient, double denominator)
